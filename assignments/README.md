@@ -1,2 +1,2 @@
-# AI-Practice
-assignments of sir Zia 
+#task 1
+
