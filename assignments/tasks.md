@@ -236,6 +236,7 @@ let favoriteMovies: string[] = ["Inception", "The Matrix", "Fight Club", "Harry 
 favoriteMovies.forEach(movie => {
   console.log(movie);
 });
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/5de42830-5ad9-4c9f-88c9-99efd4a5f062)
 
 21) They think of something you could store in a TypeScript Object. Write a program that creates Objects containing these items.]
@@ -251,6 +252,7 @@ console.log("Make:", myCar.make);
 console.log("Model:", myCar.model);
 console.log("Year:", myCar.year);
 console.log("Color:", myCar.color);
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/1f32adb7-d5cb-4127-b463-11dbc1466505)
 
 
@@ -261,6 +263,7 @@ let favoriteMovies: string[] = ["Inception", "The Matrix", "Fight Club", "Forres
 
 console.log(favoriteMovies[5]);
 console.log(favoriteMovies[2]); 
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/c7f4a245-34e3-4447-b582-4d193d2e5fe5)
 
 23) Conditional Tests: Write a series of conditional tests. Print a statement describing each test and your prediction for the results of each test. Your code should look something like this:let car = 'subaru';console.log("Is car == 'subaru'? I predict True.")console.log(car == 'subaru')• Look closely at your results, and make sure you understand why each line evaluates to True or False.• Create at least 10 tests. Have at least 5 tests evaluate to True and another 5 tests evaluate to False.
@@ -380,6 +383,7 @@ if (alien_color == 'orange') {
 } else {
   console.log("Player just earned 10 points.");
 }
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/98c74d44-01e1-4d6b-93ce-81b3d20d23f3)
 
 
@@ -432,6 +436,7 @@ if (age < 2) {
 } else {
   console.log("The person is an elder.");
 }
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/3aee94ad-01ce-460f-8c12-8f00b758671b)
 
 29) Favorite Fruit: Make a array of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your array.
@@ -460,6 +465,7 @@ if (favorite_fruits.includes("orange")) {
 if (favorite_fruits.includes("grape")) {
   console.log("You really like grapes!");
 }
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/12eaa85a-6c57-41a6-87cc-bab0031afed5)
 
 
@@ -478,6 +484,7 @@ for (let username of usernames) {
     console.log(`Hello ${username}, thank you for logging in again.`);
   }
 }
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/adc9361e-ba5f-494d-b930-02a44375d3b1)
 
 31) No Users: Add an if test to Exercise 28 to make sure the list of users is not empty.
@@ -500,6 +507,7 @@ if (usernames.length === 0) {
     }
   }
 }
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/ef741264-cec0-41de-9e16-143e02a6b214)
 
 
@@ -522,6 +530,7 @@ for (let new_username of new_users) {
     console.log(`Congratulations! ${new_username} is available.`);
   }
 }
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/d0de353a-7acb-46de-a45d-7b97c4999baa)
 
 
@@ -558,6 +567,7 @@ for (let pizza of favorite_pizzas) {
 }
 
 console.log("I really love pizza!");
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/62484403-9686-4b6a-8ae6-75e24cd11829)
 
 
@@ -571,6 +581,7 @@ for (let animal of animals) {
 }
 
 console.log("Any of these animals would make a great pet!");
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/2d6a25a8-a670-4355-b09f-cf0c9b592ebf)
 
 
@@ -583,6 +594,7 @@ function make_shirt(size, message){
 }
 
 make_shirt("Large", "The Boys");
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/fd2eecb5-1b8f-47ce-b2dd-0add5cffe10c)
 
 
@@ -596,6 +608,7 @@ function make_shirt(size = "Large", message = "I love TypeScript") {
 make_shirt();
 make_shirt("Medium");
 make_shirt("Small", "JavaScript is fun!");
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/6171005a-f050-475b-aa3b-029713fd04b4)
 
 
@@ -609,6 +622,7 @@ function describe_city(city, country = "Dubai") {
 describe_city("Karachi", "Pakistan");
 describe_city("Tokyo", "Japan");
 describe_city("Paris");
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/58b79e24-2be7-40c0-93b6-f5e643e9071c)
 
 
@@ -626,6 +640,7 @@ function city_country(city: string, country: string): string {
 console.log(city_country("Lahore", "Pakistan"));
 console.log(city_country("Tokyo", "Japan"));
 console.log(city_country("Paris", "France"));
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/b3dce48a-9dd9-4751-84b7-4377706150cc)
 
 
@@ -650,6 +665,7 @@ console.log(make_album("Artist2", "Album2"));
 console.log(make_album("Artist3", "Album3"));
 
 console.log(make_album("Artist4", "Album4", 15));
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/b6eeb3c8-7638-410a-afe5-7e9afd85b9f7)
 
 
@@ -665,6 +681,7 @@ function show_magicians(magicians: string[]): void {
 
 let magicians: string[] = ["Aamir Liaquat", "Zaheer Ahmed", "Ali Rizvi"];
 show_magicians(magicians);
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/8dc9aa52-b64d-40df-9937-95e1c52055c6)
 
 
@@ -744,6 +761,7 @@ function make_sandwich(...ingredients: string[]): void {
 make_sandwich("Bread", "Cheese", "Tomato");
 make_sandwich("Chicken", "Lettuce", "Mayonnaise", "Bread");
 make_sandwich("Ham", "Swiss Cheese", "Mustard", "Pickles", "Bread");
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/624b77c9-f7b0-4725-89eb-ce1becca483f)
 
 
@@ -767,6 +785,7 @@ function create_car(manufacturer: string, model: string, ...options: any): objec
 
 let car_info = create_car("Toyota", "Camry", { color: "Blue" }, { year: 2022 });
 console.log(car_info);
+
 ![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/4291702d-f07e-416c-bac8-629e92862ef6)
 
 
