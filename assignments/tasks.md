@@ -417,53 +417,200 @@ if (alien_color === 'red') {
 • If the person is age 65 or older, print a message that the person is an elder.
 
 CODE:
+let age = 30;
 
-
+if (age < 2) {
+  console.log("The person is a baby.");
+} else if (age >= 2 && age < 4) {
+  console.log("The person is a toddler.");
+} else if (age >= 4 && age < 13) {
+  console.log("The person is a kid.");
+} else if (age >= 13 && age < 20) {
+  console.log("The person is a teenager.");
+} else if (age >= 20 && age < 65) {
+  console.log("The person is an adult.");
+} else {
+  console.log("The person is an elder.");
+}
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/3aee94ad-01ce-460f-8c12-8f00b758671b)
 
 29) Favorite Fruit: Make a array of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your array.
 • Make a array of your three favorite fruits and call it favorite_fruits.
-
 • Write five if statements. Each should check whether a certain kind of fruit is in your array. If the fruit is in your array, the if block should print a statement, such as You really like bananas!
+
+CODE:
+let favorite_fruits: string[] = ["apple", "banana", "kiwi"];
+
+if (favorite_fruits.includes("banana")) {
+  console.log("You really like bananas!");
+}
+
+if (favorite_fruits.includes("apple")) {
+  console.log("You really like apples!");
+}
+
+if (favorite_fruits.includes("kiwi")) {
+  console.log("You really like kiwis!");
+}
+
+if (favorite_fruits.includes("orange")) {
+  console.log("You really like oranges!");
+}
+
+if (favorite_fruits.includes("grape")) {
+  console.log("You really like grapes!");
+}
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/12eaa85a-6c57-41a6-87cc-bab0031afed5)
+
+
 
 30) Hello Admin: Make a array of five or more usernames, including the name 'admin'. Imagine you are writing code that will print a greeting to each user after they log in to a website. Loop through the array, and print a greeting to each user:
 • If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
-
 • Otherwise, print a generic greeting, such as Hello Eric, thank you for logging in again.
+
+CODE:
+let usernames: string[] = ["admin", "Ali", "Fatima", "Imran", "Sana"];
+
+for (let username of usernames) {
+  if (username === 'admin') {
+    console.log("Hello admin, would you like to see a status report?");
+  } else {
+    console.log(`Hello ${username}, thank you for logging in again.`);
+  }
+}
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/adc9361e-ba5f-494d-b930-02a44375d3b1)
 
 31) No Users: Add an if test to Exercise 28 to make sure the list of users is not empty.
 • If the list is empty, print the message We need to find some users!
-
 • Remove all of the usernames from your array, and make sure the correct message is printed.
+
+CODE:
+let usernames: string[] = ["admin", "Ali", "Fatima", "Imran", "Sana"];
+
+usernames.splice(0, usernames.length);
+
+if (usernames.length === 0) {
+  console.log("We need to find some users!");
+} else {
+  for (let username of usernames) {
+    if (username === 'admin') {
+      console.log("Hello admin, would you like to see a status report?");
+    } else {
+      console.log(`Hello ${username}, thank you for logging in again.`);
+    }
+  }
+}
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/ef741264-cec0-41de-9e16-143e02a6b214)
+
 
 32) Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
 • Make a list of five or more usernames called current_users.
-
 • Make another list of five usernames called new_users. Make sure one or two of the new usernames are also in the current_users list.
-
 • Loop through the new_users list to see if each new username has already been used. If it has, print a message that the person will need to enter a new username. If a username has not been used, print a message saying that the username is available.
-
 • Make sure your comparison is case insensitive. If 'John' has been used, 'JOHN' should not be accepted.
+
+CODE:
+let current_users: string[] = ["Aisha", "Ali", "Fatima", "Imran", "Sana"];
+let new_users: string[] = ["Aisha", "Sana", "Omar", "Zainab", "Kamran"];
+
+for (let new_username of new_users) {
+  let usernameExists = current_users.some(existing_user => existing_user.toLowerCase() === new_username.toLowerCase());
+
+  if (usernameExists) {
+    console.log(`Sorry, ${new_username} is not available. Please enter a new username.`);
+  } else {
+    console.log(`Congratulations! ${new_username} is available.`);
+  }
+}
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/d0de353a-7acb-46de-a45d-7b97c4999baa)
+
 
 33) Ordinal Numbers: Ordinal numbers indicate their position in a array, such as 1st or 2nd. Most ordinal numbers end in th, except 1, 2, and 3.
 • Store the numbers 1 through 9 in a array.
-
 • Loop through the array.
-
 • Use an if-else chain inside the loop to print the proper ordinal ending for each number. Your output should read "1st 2nd 3rd 4th 5th 6th 7th 8th 9th", and each result should be on a separate line.
+
+CODE:
+for (let i = 1; i <= 9; i++) {
+  if (i === 1) {
+    console.log(`${i}st`);
+  } else if (i === 2) {
+    console.log(`${i}nd`);
+  } else if (i === 3) {
+    console.log(`${i}rd`);
+  } else {
+    console.log(`${i}th`);
+  }
+}
+
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/b422b407-2220-4c8c-a267-d57304109623)
+
 
 34) Pizzas: Think of at least three kinds of your favorite pizza. Store these pizza names in a array, and then use a for loop to print the name of each pizza.
 • Modify your for loop to print a sentence using the name of the pizza instead of printing just the name of the pizza. For each pizza you should have one line of output containing a simple statement like I like pepperoni pizza.
-
 • Add a line at the end of your program, outside the for loop, that states how much you like pizza. The output should consist of three or more lines about the kinds of pizza you like and then an additional sentence, such as I really love pizza!
+
+CODE:
+let favorite_pizzas: string[] = ["Pepperoni", "Margherita", "BBQ Chicken"];
+
+for (let pizza of favorite_pizzas) {
+  console.log(`I like ${pizza} pizza.`);
+}
+
+console.log("I really love pizza!");
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/62484403-9686-4b6a-8ae6-75e24cd11829)
 
 
 35) Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for loop to print out the name of each animal. • Modify your program to print a statement about each animal, such as A dog would make a great pet. • Add a line at the end of your program stating what these animals have in common. You could print a sentence such as Any of these animals would make a great pet!
 
+CODE:
+let animals: string[] = ["dog", "cat", "rabbit"];
+
+for (let animal of animals) {
+  console.log(`A ${animal} would make a great pet.`);
+}
+
+console.log("Any of these animals would make a great pet!");
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/2d6a25a8-a670-4355-b09f-cf0c9b592ebf)
+
+
+
 36) T-Shirt: Write a function called make_shirt() that accepts a size and the text of a message that should be printed on the shirt. The function should print a sentence summarizing the size of the shirt and the message printed on it. Call the function.
+
+CODE:
+function make_shirt(size, message){
+  console.log(`The shirt size is ${size} and the message on it is: "${message}"`);
+}
+
+make_shirt("Large", "The Boys");
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/fd2eecb5-1b8f-47ce-b2dd-0add5cffe10c)
+
 
 37) Large Shirts: Modify the make_shirt() function so that shirts are large by default with a message that reads I love TypeScript. Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
 
+CODE:
+function make_shirt(size = "Large", message = "I love TypeScript") {
+  console.log(`The shirt size is ${size} and the message on it is: "${message}"`);
+}
+
+make_shirt();
+make_shirt("Medium");
+make_shirt("Small", "JavaScript is fun!");
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/6171005a-f050-475b-aa3b-029713fd04b4)
+
+
 38) Cities: Write a function called describe_city() that accepts the name of a city and its country. The function should print a simple sentence, such as Karachi is in Pakistan. Give the parameter for the country a default value. Call your function for three different cities, at least one of which is not in the default country.
+
+CODE:
+function describe_city(city, country = "Dubai") {
+  console.log(`${city} is in ${country}.`);
+}
+
+describe_city("Karachi", "Pakistan");
+describe_city("Tokyo", "Japan");
+describe_city("Paris");
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/58b79e24-2be7-40c0-93b6-f5e643e9071c)
+
 
 39) City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this:
 
@@ -471,18 +618,156 @@ CODE:
 
 Call your function with at least three city-country pairs, and print the value that’s returned.
 
+CODE:
+function city_country(city: string, country: string): string {
+  return `${city}, ${country}`;
+}
+
+console.log(city_country("Lahore", "Pakistan"));
+console.log(city_country("Tokyo", "Japan"));
+console.log(city_country("Paris", "France"));
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/b3dce48a-9dd9-4751-84b7-4377706150cc)
+
+
 40) Album: Write a function called make_album() that builds a Object describing a music album. The function should take in an artist name and an album title, and it should return a Object containing these two pieces of information. Use the function to make three dictionaries representing different albums. Print each return value to show that Objects are storing the album information correctly. Add an optional parameter to make_album() that allows you to store the number of tracks on an album. If the calling line includes a value for the number of tracks, add that value to the album’s Object. Make at least one new function call that includes the number of tracks on an album.
+
+CODE:
+function make_album(artist: string, title: string, tracks?: number): object {
+  let album = {
+    artist: artist,
+    title: title,
+  };
+
+  if (tracks !== undefined) {
+    album['tracks'] = tracks;
+  }
+
+  return album;
+}
+
+console.log(make_album("Artist1", "Album1"));
+console.log(make_album("Artist2", "Album2"));
+console.log(make_album("Artist3", "Album3"));
+
+console.log(make_album("Artist4", "Album4", 15));
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/b6eeb3c8-7638-410a-afe5-7e9afd85b9f7)
+
+
 
 41) Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(), which prints the name of each magician in the array.
 
+CODE:
+function show_magicians(magicians: string[]): void {
+  for (let magician of magicians) {
+    console.log(magician);
+  }
+}
+
+let magicians: string[] = ["Aamir Liaquat", "Zaheer Ahmed", "Ali Rizvi"];
+show_magicians(magicians);
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/8dc9aa52-b64d-40df-9937-95e1c52055c6)
+
+
 42) Great Magicians: Start with a copy of your program from Exercise 39. Write a function called make_great() that modifies the array of magicians by adding the phrase the Great to each magician’s name. Call show_magicians() to see that the list has actually been modified.
+
+CODE:
+function make_great(magicians: string[]): string[] {
+  let great_magicians: string[] = [];
+
+  for (let magician of magicians) {
+    great_magicians.push(`${magician} the Great`);
+  }
+
+  return great_magicians;
+}
+
+function show_magicians(magicians: string[]): void {
+  for (let magician of magicians) {
+    console.log(magician);
+  }
+}
+
+let magicians: string[] = ["Aamir Liaquat", "Zaheer Ahmed", "Ali Rizvi"];
+let great_magicians: string[] = make_great(magicians);
+
+console.log("Original Magicians:");
+show_magicians(magicians);
+
+console.log("\nGreat Magicians:");
+show_magicians(great_magicians);
+
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/ea5d5914-1e58-430f-892f-7f72a7bf15a1)
+
 
 43) Unchanged Magicians: Start with your work from Exercise 40. Call the function make_great() with a copy of the array of magicians’ names. Because the original array will be unchanged, return the new array and store it in a separate array. Call show_magicians() with each array to show that you have one array of the original names and one array with the Great added to each magician’s name.
 
+CODE:
+function make_great(magicians: string[]): string[] {
+  let great_magicians: string[] = [];
+
+  for (let magician of magicians) {
+    great_magicians.push(`${magician} the Great`);
+  }
+
+  return great_magicians;
+}
+
+function show_magicians(magicians: string[]): void {
+  for (let magician of magicians) {
+    console.log(magician);
+  }
+}
+
+let magicians: string[] = ["Aamir Liaquat", "Zaheer Ahmed", "Ali Rizvi"];
+let copy_of_magicians: string[] = [...magicians];
+let great_magicians: string[] = make_great(copy_of_magicians);
+
+console.log("Original Magicians:");
+show_magicians(magicians);
+
+console.log("\nGreat Magicians:");
+show_magicians(great_magicians);
+
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/84751113-f0be-4436-bb23-8c98542d2b10)
+
 44) Sandwiches: Write a function that accepts a array of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich that is being ordered. Call the function three times, using a different number of arguments each time.
+
+CODE:
+function make_sandwich(...ingredients: string[]): void {
+  console.log("Sandwich Summary:");
+  for (let ingredient of ingredients) {
+    console.log(`- ${ingredient}`);
+  }
+  console.log("Enjoy your sandwich!\n");
+}
+
+make_sandwich("Bread", "Cheese", "Tomato");
+make_sandwich("Chicken", "Lettuce", "Mayonnaise", "Bread");
+make_sandwich("Ham", "Swiss Cheese", "Mustard", "Pickles", "Bread");
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/624b77c9-f7b0-4725-89eb-ce1becca483f)
+
+
 
 45) Cars: Write a function that stores information about a car in a Object. The function should always receive a manufacturer and a model name. It should then accept an arbitrary number of keyword arguments. Call the function with the required information and two other name-value pairs, such as a color or an optional feature. Print the Object that’s returned to make sure all the information was stored correctly.
 
+CODE:
+function create_car(manufacturer: string, model: string, ...options: any): object {
+  let car_info: any = {
+    manufacturer: manufacturer,
+    model: model,
+  };
+
+  for (let option of options) {
+    let key = Object.keys(option)[0];
+    car_info[key] = option[key];
+  }
+
+  return car_info;
+}
+
+let car_info = create_car("Toyota", "Camry", { color: "Blue" }, { year: 2022 });
+console.log(car_info);
+![image](https://github.com/bilalsaeed10b/AI-Practice/assets/143334946/4291702d-f07e-416c-bac8-629e92862ef6)
 
 
 
